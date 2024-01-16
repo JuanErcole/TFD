@@ -56,15 +56,8 @@ export default ({
   cards = null,
   heading = "Lo Que Ofrecemos",
   subheading = "TFD",
-  description = "Somos una joven start up, tenemos mucho por ofrecer, mas alla de el maximo compromiso por el trabajo de nuestros clientes."
+  description = "Estamos comprometidos a proporcionar soluciones integrales y a medida que se alineen perfectamente con tus metas y visión empresarial."
 }) => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
 
   const defaultCards = [
     {
@@ -77,13 +70,26 @@ export default ({
       title: "Diseño Centrado en el Usuario:",
       description: "Diseño de interfaces de usuario y experiencia de usuario excepcionales. Diseño de aplicaciones móviles y web. Diseño de sitios web y aplicaciones web. Interfaces intuitivas y atractivas."
     },
-    { imageSrc: CustomizeIconImage,
+    {
+      imageSrc: CustomizeIconImage,
       title: "Consultoría Tecnológica",
-      description: "Asesoramiento estratégico para tus proyectos tecnológicos. Evaluación y optimización de la infraestructura existente."      
+      description: "Asesoramiento estratégico para tus proyectos tecnológicos. Evaluación y optimización de la infraestructura existente."
     },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
+    {
+      imageSrc: ReliableIconImage,
+      title: "Desarrollo de Aplicaciones Cross-Platform",
+      description: "Creación de aplicaciones que funcionan en múltiples plataformas, maximizando el alcance de tu audiencia."
+    },
+    { 
+      imageSrc: FastIconImage, 
+      title: "Integración de Tecnologías Emergentes",
+      description: "Exploramos e implementamos tecnologías emergentes como inteligencia artificial, blockchain y realidad aumentada para mantener tu empresa a la vanguardia."      
+    },
+    { 
+      imageSrc: SimpleIconImage, 
+      title: "Soporte Continuo y Mantenimiento",
+      description: "Ofrecemos servicios de soporte post-lanzamiento y mantenimiento para garantizar el rendimiento óptimo de tus aplicaciones a lo largo del tiempo." 
+    }
   ];
 
   if (!cards) cards = defaultCards;

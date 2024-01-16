@@ -7,16 +7,16 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { SectionDescription } from "components/misc/Typography.js";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 
-const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 bg-primary-900 text-gray-100`;
+const PrimaryBackgroundContainer = tw(Container)`-mx-8 px-8 bg-blue-200 text-gray-700`;
 
 const HeadingContainer = tw.div``;
-const Subheading = tw(SubheadingBase)`text-center text-gray-100 mb-4`;
+const Subheading = tw(SubheadingBase)`text-center text-gray-800 mb-4`;
 const Heading = tw(SectionHeading)``;
-const Description = tw(SectionDescription)`mx-auto text-center text-gray-300`;
+const Description = tw(SectionDescription)`mx-auto text-center text-gray-800`;
 
 const FaqsContainer = tw.div`mt-10 sm:mt-16 w-full flex-1 lg:flex justify-between items-start max-w-screen-lg mx-auto`;
 const FaqsColumn = tw.div`w-full lg:max-w-lg lg:mr-12 last:mr-0`;
-const Faq = tw.div`select-none cursor-pointer border-b-2 border-primary-300 hover:border-primary-500 transition-colors duration-300 py-6`;
+const Faq = tw.div`select-none cursor-pointer border-b-2 border-blue-400 hover:border-primary-500 transition-colors duration-300 py-6`;
 const Question = tw.div`flex justify-between items-center`;
 const QuestionText = tw.div`text-sm sm:text-lg font-semibold tracking-wide`;
 const QuestionToggleIcon = styled(motion.span)`
@@ -25,43 +25,42 @@ const QuestionToggleIcon = styled(motion.span)`
     ${tw`w-6 h-6`}
   }
 `;
-const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-gray-300`;
+const Answer = tw(motion.div)`hidden text-sm font-normal mt-4 text-gray-800`;
 
 export default ({
   subheading = "",
-  heading = "Frequently Asked Questions",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  heading = "Preguntas Frecuentes",
+  description = "A continuación, encontrará las preguntas más frecuentes que nos hacen nuestros clientes. Si tiene alguna pregunta adicional, no dude en comunicarse con nosotros.",
   faqs = [
     {
-      question: "Is lunch provided free of cost ?",
-      answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+      question: "¿Qué tipo de proyectos maneja TheFridayDevs?",
+      answer: "TheFridayDevs se especializa en el desarrollo de software personalizado, incluyendo aplicaciones web y móviles, software empresarial y soluciones de comercio electrónico."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "¿Cómo puedo solicitar una consulta?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Puedes solicitar una consulta o presupuesto a través de nuestro formulario de contacto en línea o enviándonos un correo electrónico a thefridaysdevs@gmail.com",
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "¿Ofrecen soporte post-lanzamiento y servicios de mantenimiento?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        " Sí, proporcionamos servicios de soporte continuo y mantenimiento para garantizar el rendimiento óptimo de las aplicaciones a lo largo del tiempo."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "¿Cuál es el tiempo estimado de desarrollo para un proyecto típico?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "El tiempo de desarrollo puede variar según la complejidad del proyecto. Para obtener una estimación precisa, te recomendamos ponerse en contacto con nuestro equipo y discutir los detalles de tu proyecto."
     },
     {
-      question: "What kind of SLA Guarantee do you provide ? ",
+      question: "¿Cómo garantiza TheFridayDevs la seguridad de las aplicaciones desarrolladas?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Implementamos las mejores prácticas de seguridad durante todo el ciclo de vida del desarrollo y realizamos pruebas exhaustivas para garantizar la seguridad de las aplicaciones."
     },
     {
-      question: "Where are the servers located ?",
+      question: "¿Cuál es el proceso de colaboración con TheFridayDevs?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    }
+        "Nuestro proceso de colaboración incluye una consulta inicial, definición de requisitos, desarrollo iterativo y pruebas, asegurando una comunicación abierta y transparente en cada etapa."
+    },
   ]
 }) => {
   const faqCol1 = [];
