@@ -74,7 +74,7 @@ export default ({
 
   faqs.map((faq, index) => {
     const renderedFaq = (
-      <Faq key={index} onClick={() => toggleQuestion(index)}>
+      <Faq id="faq" key={index} onClick={() => toggleQuestion(index)}>
         <Question>
           <QuestionText>{faq.question}</QuestionText>
           <QuestionToggleIcon
